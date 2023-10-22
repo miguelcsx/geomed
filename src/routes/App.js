@@ -2,8 +2,12 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Cards from '../components/Cards';
+import { documentTitle } from '../lib/utils';
 
 const App = () => {
+  
+  documentTitle();
+
   const images = {
     basics: "https://cdn.pixabay.com/photo/2016/07/11/12/16/mathematics-1509559_960_720.jpg",
     lines: "https://media.istockphoto.com/id/946220306/es/vector/negro-con-franjas-diagonales-vector-de-fondo-de-plantilla-acoplamiento-directo-diagonal-rayas.jpg?s=612x612&w=0&k=20&c=Ele3P2G_puPSGN1hpxmoyLq9bgI4agSC7oChocC5ftc=",

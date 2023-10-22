@@ -1,7 +1,10 @@
 import { useRouteError } from "react-router-dom";
-import { handleGoBack } from "../lib/utils";
+import { documentTitle, handleGoBack } from "../lib/utils";
 
-export default function ErrorPage() {
+const ErrorPage = () => {
+
+    documentTitle("404 Error");
+
     const error = useRouteError();
 
     return (
@@ -15,3 +18,4 @@ export default function ErrorPage() {
         </div>
     );
 };
+export default ErrorPage;

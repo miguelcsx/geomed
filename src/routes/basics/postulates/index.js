@@ -3,8 +3,13 @@ import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import CollapseMenu from "../../../components/CollapseMenu";
 import Cards from "../../../components/Cards";
+import { documentTitle } from "../../../lib/utils";
+
 
 const BasicPostulates = () => {
+
+    documentTitle("Basic Postulates");
+
     const images = {
         order:
             "https://media.istockphoto.com/id/689964010/es/foto/categor%C3%ADa-de-geometr%C3%ADa.jpg?s=612x612&w=0&k=20&c=0Vsd96CaD1xBOfvwqSVlwmDMj6dZjKTL0DHgwHghz1M=",

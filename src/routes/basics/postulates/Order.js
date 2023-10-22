@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { postulates as descriptions } from '../../../lib/descriptions';
-
 import Dashboard from '../../../components/Dashboard';
+import { documentTitle } from '../../../lib/utils';
 
 
 const currentSection = 'Postulates of Order'; // Replace with your current section
@@ -29,6 +29,8 @@ const postulateComponents = {
 };
 
 const OrderPostulates = () => {
+
+    documentTitle(currentSection);
 
     return (
         <Dashboard
