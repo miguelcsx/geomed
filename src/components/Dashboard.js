@@ -6,7 +6,7 @@ import Description from "./Description";
 import Menu from "./Menu";
 import Sidenav from "./Sidenav";
 
-const Dashboard = ({ descriptions, currentSection, theorems, theoremComponents }) => {
+const Dashboard = ({ titles, descriptions, currentSection, theorems, theoremComponents }) => {
     const [selectedTheorem, setSelectedTheorem] = useState('');
     // State to trigger a reload
     const [forceReload, setForceReload] = useState(false);
@@ -58,6 +58,7 @@ const Dashboard = ({ descriptions, currentSection, theorems, theoremComponents }
                     <Menu reloadComponent={reloadComponent}/>
                 </div>
                 <Sidenav
+                title={titles}
                     type="postulate"
                     currentSection={currentSection}
                     theorems={theorems}

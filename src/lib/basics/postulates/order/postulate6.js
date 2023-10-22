@@ -4,13 +4,13 @@ import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 import Setup from '../../../setup';
 import { updatePoint, calculateMiddlePoint } from '../../../utils';
-import { animatePopup } from '../../../animations';
+import { loopPopup } from '../../../animations';
 
-const Postulate2 = () => {
-
+const Postulate6 = () => {
     const { svg, centerX, centerY } = Setup();
 
     useEffect(() => {
+
         // Define the initial coordinates of points
         let pointA = { x: centerX / 3, y: centerY };
         let pointB = { x: centerX * 1.5, y: centerY };
@@ -22,7 +22,7 @@ const Postulate2 = () => {
             updatePoint(circleB, labelB, pointB);
             pointC = calculateMiddlePoint(pointA, pointB);
             updatePoint(circleC, labelC, pointC);
-        };
+        }
 
         // Create two ciricles for representing points A and B with drag functionality
         const circleA = svg.append("circle")
@@ -110,15 +110,10 @@ const Postulate2 = () => {
             .duration(1000)
             .attr("r", 10)
 
-        animatePopup(circleA);
-        animatePopup(circleB);
-
-        circles.on("click", function () {
-            animatePopup(d3.select(this));
-        })
+        // Trigger the pop-up animination for the points A and B
+        loopPopup(circleC);
 
     });
-
 };
 
-export default Postulate2;
+export default Postulate6;

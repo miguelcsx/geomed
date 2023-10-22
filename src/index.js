@@ -12,7 +12,7 @@ import ErrorPage from './routes/error-page';
 import Basics from './routes/basics';
 import BasicPostulates from './routes/basics/postulates';
 import OrderPostulates from './routes/basics/postulates/Order';
-import LinkingPostulates from './routes/basics/postulates/Linking';
+import LinkingPostulates from './routes/basics/postulates/Incidence';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     element: <OrderPostulates/>
   },
   {
-    path: "/basics/postulates/linking",
+    path: "/basics/postulates/incidence",
     element: <LinkingPostulates/>
   }
 ])

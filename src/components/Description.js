@@ -15,7 +15,7 @@ const Description = ({ theoremId, descriptions }) => {
     }, [theoremId, descriptions]);
 
     return (
-        <h3 id="geometryDescription" className="text-base lg:text-xl font-semibold text-center flex items-center justify-center py-6 lg:py-12"></h3>
+        <h3 id="geometryDescription" className="text-base lg:text-xl font-semibold text-center flex items-center justify-center py-6 lg:py-8"></h3>
     );
 };
 

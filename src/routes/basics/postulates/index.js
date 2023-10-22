@@ -8,7 +8,7 @@ const BasicPostulates = () => {
     const images = {
         order:
             "https://media.istockphoto.com/id/689964010/es/foto/categor%C3%ADa-de-geometr%C3%ADa.jpg?s=612x612&w=0&k=20&c=0Vsd96CaD1xBOfvwqSVlwmDMj6dZjKTL0DHgwHghz1M=",
-        linking:
+        incidence:
             "https://cdn.pixabay.com/photo/2021/01/11/10/20/circuit-board-5907811_640.jpg",
     };
 
@@ -19,9 +19,9 @@ const BasicPostulates = () => {
             image: images.order
         },
         {
-            url: "/basics/postulates/linking/",
-            name: "Linking",
-            image: images.linking
+            url: "/basics/postulates/incidence/",
+            name: "Incidence",
+            image: images.incidence
         }
     ]
 

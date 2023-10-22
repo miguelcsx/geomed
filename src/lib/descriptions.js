@@ -1,5 +1,19 @@
 // assets/scripts/description.js
 
+export const basic_definitions = {
+    "definition1": "\\text{Geometric Figure}",
+    "definition2": "\\text{Proof}",
+    "definition3": "\\text{Conjecture}",
+    "definition4": "\\text{Theorem}",
+    "definition5": "\\text{corollary}",
+    "definition6": "\\text{postulate}",
+    // Segment
+    "definition7": "\\text{Let } A \\text{ and } B \\ text{ be two points, the geometric figure constituted by points } A \\text{ and } B \\text{ and all the points between them is called segment } A \\text {, } B \\text{ and is denoted} \\overline{\\rm{AB}}",
+    // Collinearity
+    "definition8": "\\text{Tree points A} \\text{, } B \\text{, and } C \\text{ are said to be collinear if and only if one of them is between the other two.}",
+
+};
+
 export const postulates = {
     // Postulates of Order
     "postulate1": "\\text{There are at least two points}",
@@ -9,14 +23,13 @@ export const postulates = {
     "postulate5": "\\text{If } A-C-B \\text{ and } A-D-C \\text{, then } A-D-B.",
     "postulate6": "\\text{Given three collinear points,} \\newline \\text{one and only one of them lies between the two.}",
     "postulate7": "\\text{Given any two points } A \\text{ and } B \\text{, there exists at least one point } D \\text{,} \\newline \\text{such that } A-B-D.",
-    // Postualates of Linking
-    postulate8: "\\text{Given two different points } A \\text{ and } B \\text{,} \\newline \\text{there is a unique line } \\overline{\\rm{AB}} \\text{ that contains them.}"
+    // Postualates of Incidence
+    "postulate8": "\\text{For any two distinct points } A \\text{ and } B \\text{,} \\newline \\text{there exists a unique line } \\overline{\\rm{AB}} \\text{ that contains them.}",
+    "postulate9": "\\text{A line contains at least two distinct points.}",
 };
 
-export const definitions = {
-    "definition1.1": "\\text{Geometric Figure}",
-    "definition1.2": "\\text{Proof}",
-    "definition1.3": "\\text{Conjecture}",
-    "definition1.4": "\\text{Theorem}",
+
+
+export const basic_theorems = {
 
 };

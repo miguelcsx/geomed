@@ -3,21 +3,27 @@ import { postulates as descriptions } from '../../../lib/descriptions';
 
 import Dashboard from '../../../components/Dashboard';
 
+const currentSection = 'Postulates of Incidence'; // Replace with your current section
 const postulates = [8, 9]; // Replace with your postulates
-const currentSection = 'Postulates of Linking'; // Replace with your current section
+
+const titles = {
+    8: "Line Uniqueness",
+    9: "Line Existence"
+}
 
 // Create a mapping of postulate IDs to component import functions
 const postulateComponents = {
-    // postulate8: () => import('../../../lib/basics/postulates/linking/postulate8'),
-    // postulate9: () => import('../../../lib/basics/postulates/linking/postulate9'),
+    postulate8: () => import('../../../lib/basics/postulates/incidence/postulate8'),
+    // postulate9: () => import('../../../lib/basics/postulates/incidence/postulate9'),
     // Add more postulates as needed
 };
 
-const LinkingPostulates = () => {
-    
+const IncidencePostulates = () => {
+
 
     return (
         <Dashboard
+            titles={titles}
             descriptions={descriptions}
             currentSection={currentSection}
             theorems={postulates}
@@ -27,4 +33,4 @@ const LinkingPostulates = () => {
 
 }
 
-export default LinkingPostulates;
+export default IncidencePostulates;

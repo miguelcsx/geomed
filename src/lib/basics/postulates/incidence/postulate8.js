@@ -1,30 +1,50 @@
-// src/basics/postulates/order/postulate3.js
-
 import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 import Setup from '../../../setup';
-import { updatePoint, calculateMiddlePoint } from '../../../utils';
+import { updatePoint, extendPoint } from '../../../utils';
 import { animatePopup } from '../../../animations';
 
-const Postulate2 = () => {
-
+const Postulate8 = () => {
     const { svg, centerX, centerY } = Setup();
 
     useEffect(() => {
+
         // Define the initial coordinates of points
         let pointA = { x: centerX / 3, y: centerY };
         let pointB = { x: centerX * 1.5, y: centerY };
-        let pointC = calculateMiddlePoint(pointA, pointB);
-
-        function updatePoints() {
-            // Update the position of the points and labels
-            updatePoint(circleA, labelA, pointA);
-            updatePoint(circleB, labelB, pointB);
-            pointC = calculateMiddlePoint(pointA, pointB);
-            updatePoint(circleC, labelC, pointC);
+        let line = {
+            x1: pointA.x, y1: pointA.y,
+            x2: pointB.x, y2: pointB.y
         };
 
-        // Create two ciricles for representing points A and B with drag functionality
+        function updateLine() {
+            let extendPointA = {
+                x: pointA.x - extendPoint(pointA, pointB, 30).x,
+                y: pointA.y - extendPoint(pointA, pointB, 30).y
+            };
+            let extendPointB = {
+                x: pointB.x + extendPoint(pointA, pointB, 30).x,
+                y: pointB.y + extendPoint(pointA, pointB, 30).y
+            };
+
+            lineA
+                .transition()
+                .duration(500)
+                .attr("x1", extendPointA.x)
+                .attr("y1", extendPointA.y)
+                .attr("x2", extendPointB.x)
+                .attr("y2", extendPointB.y);
+        }
+
+        const lineA = svg.append("line")
+            .attr("x1", line.x1)
+            .attr("y1", line.y1)
+            .attr("x2", line.x2)
+            .attr("y2", line.y2)
+            .style("stroke", "black")
+            .style("stroke-width", 5)
+            .style("stroke-dasharray", "5");
+
         const circleA = svg.append("circle")
             .attr("cx", pointA.x)
             .attr("cy", pointA.y)
@@ -34,7 +54,8 @@ const Postulate2 = () => {
                 .on("start", () => { })
                 .on("drag", (event) => {
                     pointA = { x: event.x, y: event.y };
-                    updatePoints();
+                    updatePoint(circleA, labelA, pointA);
+                    updateLine();
                 })
                 .on("end", () => { })
             );
@@ -48,26 +69,8 @@ const Postulate2 = () => {
                 .on("start", () => { })
                 .on("drag", (event) => {
                     pointB = { x: event.x, y: event.y };
-                    updatePoints();
-                })
-                .on("end", () => { })
-            )
-
-        const circleC = svg.append("circle")
-            .attr("cx", pointC.x)
-            .attr("cy", pointC.y)
-            .attr("r", 10)
-            .attr("fill", "green")
-            .call(d3.drag()
-                .on("start", () => { })
-                .on("drag", (event) => {
-                    // Move pointC in the y-axis
-                    pointC = { x: pointC.x, y: event.y }
-                    // Update points A and B accordingly
-                    const deltaY = pointC.y - pointA.y;
-                    pointA = { x: pointA.x, y: pointA.y + deltaY };
-                    pointB = { x: pointB.x, y: pointB.y + deltaY };
-                    updatePoints();
+                    updatePoint(circleB, labelB, pointB);
+                    updateLine();
                 })
                 .on("end", () => { })
             );
@@ -89,29 +92,21 @@ const Postulate2 = () => {
             .attr("font-size", "14px")
             .attr("fill", "blue");
 
-        const labelC = svg
-            .append("text")
-            .text("C")
-            .attr("x", pointC.x + 20)
-            .attr("y", pointC.y - 20)
-            .attr("font-size", "14px")
-            .attr("fill", "green");
 
-
-        updatePoints();
+        updateLine();
 
         const circles = svg.selectAll("circle");
 
         circles.attr("r", 0);
 
+        // Transition to make the circles appear first
         circles
             .transition()
             .delay(1000)
-            .duration(1000)
+            .duration(500)
             .attr("r", 10)
 
-        animatePopup(circleA);
-        animatePopup(circleB);
+
 
         circles.on("click", function () {
             animatePopup(d3.select(this));
@@ -119,6 +114,7 @@ const Postulate2 = () => {
 
     });
 
+
 };
 
-export default Postulate2;
+export default Postulate8;
