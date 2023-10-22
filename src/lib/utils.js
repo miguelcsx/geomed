@@ -15,3 +15,6 @@ export function calculateMiddlePoint(pA, pB) {
     return { x: centerX, y: centerY };
 };
 
+export function reloadComponent(setComponentKey) {
+    setComponentKey((prevKey) => prevKey + 1); // Update the key to force the reload
+};
