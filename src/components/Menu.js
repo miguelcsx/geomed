@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { handleGoBack } from '../lib/utils';
 
-const Menu = () => {
+const Menu = ( {reloadComponent}) => {
     return (
-        <div className="bg-gray-400 p-6 flex justify-center">
+        <div className="bg-gray-400 p-5 flex justify-center">
 
             <button className="mx-4 w-6 h-6" onClick={handleGoBack}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-1 bi bi-arrow-left" fill="currentColor" viewBox="0 0 16 16">
@@ -25,7 +25,7 @@ const Menu = () => {
                 </button>
             </Link>
 
-            <button id="restartButton" className="mx-4 w-6 h-6">
+            <button id="restartButton" className="mx-4 w-6 h-6" onClick={reloadComponent} >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-3 bi bi-arrow-clockwise" fill="currentColor" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
                     <path

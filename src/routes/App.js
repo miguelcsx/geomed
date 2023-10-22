@@ -11,8 +11,8 @@ const App = () => {
     triangles: "https://media.istockphoto.com/id/1126741764/es/vector/fondo-de-mosaico-negro-y-oro.jpg?s=612x612&w=0&k=20&c=1LGTuVLwdgvY6QDGsj4EMCl870XSoLGLW2p0uFtHQ4w=",
   }
   return (
-    <>
-      <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div className="flex flex-col h-screen overflow-hidden">
+      <div className="flex-grow bg-gray-100 flex flex-col items-center justify-center">
 
         <Header
           title="Geomed"
@@ -32,7 +32,7 @@ const App = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 
 }
