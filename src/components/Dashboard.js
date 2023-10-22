@@ -1,15 +1,40 @@
 // src/components/Dashboard.js
 
-import React, { useState, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Canvas from "./Canvas";
 import Description from "./Description";
 import Menu from "./Menu";
 import Sidenav from "./Sidenav";
+import Banner from "./Banner";
 
 const Dashboard = ({ titles, descriptions, currentSection, theorems, theoremComponents }) => {
     const [selectedTheorem, setSelectedTheorem] = useState('');
     // State to trigger a reload
     const [forceReload, setForceReload] = useState(false);
+
+    const [showBanner, setShowBanner] = useState(false);
+
+    const handleOrientationChange = (event) => {
+        if (event.matches) {
+            setShowBanner(true);
+        } else {
+            setShowBanner(false);
+        }
+    };
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(orientation: portrait)');
+
+        handleOrientationChange(mediaQuery); // Comprueba la orientación inicial
+
+        // Agrega un oyente para detectar cambios de orientación
+        mediaQuery.addListener(handleOrientationChange);
+
+        // Limpia el oyente al desmontar el componente
+        return () => {
+            mediaQuery.removeListener(handleOrientationChange);
+        };
+    }, []);
 
     const renderSelectedTheorem = () => {
         if (selectedTheorem && theoremComponents[selectedTheorem]) {
@@ -50,15 +75,18 @@ const Dashboard = ({ titles, descriptions, currentSection, theorems, theoremComp
 
     return (
         <div className="App">
+            {showBanner && (
+                <Banner />
+            )}
             <div className="flex h-screen">
                 <div className="flex-1 flex flex-col">
                     <Description descriptions={descriptions} theoremId={selectedTheorem} />
                     <Canvas />
                     {renderSelectedTheorem()}
-                    <Menu reloadComponent={reloadComponent}/>
+                    <Menu reloadComponent={reloadComponent} />
                 </div>
                 <Sidenav
-                title={titles}
+                    title={titles}
                     type="postulate"
                     currentSection={currentSection}
                     theorems={theorems}

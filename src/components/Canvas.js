@@ -6,7 +6,7 @@ class Canvas extends Component {
         return (
             <svg
                 id="canvas"
-                className="flex-1 w-full h-auto border border-solid border-gray-300"
+                className="flex-1 w-full h-auto border border-solid border-slate-300"
             ></svg>
         );
     }
