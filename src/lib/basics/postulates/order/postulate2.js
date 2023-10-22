@@ -109,9 +109,16 @@ const Postulate2 = () => {
             .delay(1000)
             .duration(1000)
             .attr("r", 10)
+            .on("end", () => {
+                animatePopup(circleA);
+                animatePopup(circleB);
+                // Wait for 2 seconds and then call animatePopup
+                setTimeout(() => {
+                    animatePopup(circleC);
+                }, 1000);
 
-        animatePopup(circleA);
-        animatePopup(circleB);
+            })
+
 
         circles.on("click", function () {
             animatePopup(d3.select(this));

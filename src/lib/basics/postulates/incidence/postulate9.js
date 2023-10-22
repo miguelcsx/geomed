@@ -1,10 +1,12 @@
+// src/lib/basics/postulates/incidence/postulate9.js
+
 import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 import Setup from '../../../setup';
 import { updatePoint, extendPoint } from '../../../utils';
-import { animatePopup } from '../../../animations';
+import { animatePopup, loopPopup } from '../../../animations';
 
-const Postulate8 = () => {
+const Postulate9 = () => {
     const { svg, centerX, centerY } = Setup();
 
     useEffect(() => {
@@ -29,7 +31,7 @@ const Postulate8 = () => {
 
             lineA
                 .transition()
-                .duration(2500)
+                .duration(1000)
                 .attr("x1", extendPointA.x)
                 .attr("y1", extendPointA.y)
                 .attr("x2", extendPointB.x)
@@ -102,20 +104,17 @@ const Postulate8 = () => {
         // Transition to make the circles appear first
         circles
             .transition()
-            .duration(20)
+            .delay(1000)
+            .duration(50)
             .attr("r", 10)
+                .on("end", () => {
+                    animatePopup(circles);
+                })
 
-        animatePopup(circleA);
-        animatePopup(circleB);
-
-
-        circles.on("click", function () {
-            animatePopup(d3.select(this));
-        })
 
     });
 
 
 };
 
-export default Postulate8;
+export default Postulate9;

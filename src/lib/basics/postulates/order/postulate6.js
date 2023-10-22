@@ -109,9 +109,9 @@ const Postulate6 = () => {
             .delay(1000)
             .duration(1000)
             .attr("r", 10)
-
-        // Trigger the pop-up animination for the points A and B
-        loopPopup(circleC);
+            .on("end", () => {
+                loopPopup(circleC);
+            })
 
     });
 };

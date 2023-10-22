@@ -109,11 +109,10 @@ const Postulate4 = () => {
             .delay(1000)
             .duration(1000)
             .attr("r", 10)
-
-        // Add a click event to trigger the animation
-        circles.on("click", function () {
-            animatePopup(d3.select(this));
-        });
+                .on("end", () => {
+                    animatePopup(circleA);
+                    animatePopup(circleB);
+                })
 
         // Wait 5 seconds and change the position of the points
         setTimeout(() => {
@@ -125,8 +124,12 @@ const Postulate4 = () => {
 
             animatePopup(circleA);
             animatePopup(circleB);
-        }, 4000);
+        }, 4500);
 
+        // Add a click event to trigger the animation
+        circles.on("click", function () {
+            animatePopup(d3.select(this));
+        });
     });
 
 };

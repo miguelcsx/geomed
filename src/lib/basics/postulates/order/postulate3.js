@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 import Setup from '../../../setup';
 import { updatePoint, calculateMiddlePoint } from '../../../utils';
-import { loopPopup } from '../../../animations';
+import { animatePopup, loopPopup } from '../../../animations';
 
 const Postulate3 = () => {
     const { svg, centerX, centerY } = Setup();
@@ -109,10 +109,16 @@ const Postulate3 = () => {
             .delay(1000)
             .duration(1000)
             .attr("r", 10)
+            .on("end", () => {
+                animatePopup(circleC);
 
-        // Trigger the pop-up animination for the points A and B
-        loopPopup(circleA);
-        loopPopup(circleB);
+                // Wait for 2 seconds and then call loopPopup
+                setTimeout(() => {
+                    loopPopup(circleA);
+                    loopPopup(circleB);
+                }, 2000);
+            });
+
 
     });
 };
