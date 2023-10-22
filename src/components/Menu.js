@@ -4,7 +4,7 @@ import { handleGoBack } from '../lib/utils';
 
 const Menu = ( {reloadComponent}) => {
     return (
-        <div className="bg-gray-400 p-5 flex justify-center">
+        <div className="bg-gray-400 p-2 lg:p-5 flex justify-center">
 
             <button className="mx-4 w-6 h-6" onClick={handleGoBack}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-1 bi bi-arrow-left" fill="currentColor" viewBox="0 0 16 16">
