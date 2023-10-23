@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# GeoMed: Geometry Made Interactive
+
+GeoMed is a web-based visualization tool built with React and d3.js, offering users a dynamic platform to explore, visualize, and experiment with various Euclidean geometry concepts. Whether you're a student, teacher, or geometry enthusiast, GeoMed provides an interactive space for learning and visually representing geoemtry principles.
+
+
+## Planned Features
+
+- **Geometry Visualization**: Display and visualize constructions, theorems, and definitions in Euclidean geometry.
+- **Interactive Graphical Representation**: Create, edit, and manipulate geometric elements in real-time.
+- **Measurement Tools**: Calculate angles, distances, and areas to gain insights into geometric properties.
+- **Geometry Transformations**: Apply translations, rotations, and reflections to geometric objects.
+- **Angle Bisectors and Perpendicular Bisectors**: Construct angle bisectors and perpendicular bisectors for angles or line segments.
+- **Triangle Properties**: Explore triangle congruence and similarity, visualizing their properties.
+- **Interactive Proofs**: Construct and demonstrate geometric proofs with step-by-step guidance.
+- **Customization**: Personalize the appearance of geometric elements with various colors and styles.
+- **Export and Save**: Save your visualizations, export images, and easily share your constructions with others.
+
+## Getting Started 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+1. Clone this repository to your local machine.
 
-In the project directory, you can run:
+```bash
+git clone https://github.com/miguelcsx/geomed.git
+```
 
-### `npm start`
+2. Install the required dependencies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Start the React application
 
-### `npm test`
+```bash
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm run build`
+5. Begin exploring and interacting with the various geometry features.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Visualize Euclidean geometry concepts by creating and editing geometric shapes and elements.
+- Utilize measurement tools to calculate angles, distances, and areas for better understanding.
+- Apply transformations to observe how geometric objects change in real-time.
+- Experiment with angle bisectors and perpendicular bisectors.
+- Explore triangle properties and their properties visually.
+- Construct and demonstrate geometric proofs with the interactive proof assistant.
+- Customize the visual appearance of geometric elements using the provided controls.
+- Save your visualizations and export images to share your insights and constructions.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [d3.js](https://d3js.org/): A JavaScript library for data visualization.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+We welcome contributions to make GeoMed even better! If you'd like to contribute, please follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Fork this repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Submit a pull request.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgements
 
-### Code Splitting
+- The React and d3.js community for providing a powerful tools for building interactive applications.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Happy geometry exploring with GeoMed!
