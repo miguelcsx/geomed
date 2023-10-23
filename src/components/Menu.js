@@ -12,15 +12,15 @@ const Menu = ({ reloadComponent }) => {
                 </svg>
                 <span className="text-sm lg:text-base">Back</span>
             </button>
-
-            <button className="flex flex-col items-center" onClick={handleGoBack}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 bi bi-house" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
-                </svg>
-                <span className="text-sm lg:text-base">Home</span>
-            </button>
-
+            <Link to='/'>
+                <button className="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 bi bi-house" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                    </svg>
+                    <span className="text-sm lg:text-base">Home</span>
+                </button>
+            </Link>
             <button id="restartButton" className="flex flex-col items-center" onClick={reloadComponent}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 bi bi-arrow-clockwise" fill="currentColor" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
