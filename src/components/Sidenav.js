@@ -3,7 +3,7 @@ import React from 'react';
 const Sidenav = ({ currentSection, theorems, onTheoremSelect, type, title }) => {
   return (
     <div className="w-1/4 max-h-screen bg-slate-200 overflow-y-auto px-4 pb-4">
-      <h2 className="text-2xl font-medium mb-4 text-center sticky top-0 bg-slate-200 z-10 py-4">
+      <h2 className="text-xl lg:text-2xl font-medium mb-4 text-center sticky top-0 bg-slate-200 z-10 py-4">
         {currentSection}
       </h2>
       {theorems.map((theoremID) => (
