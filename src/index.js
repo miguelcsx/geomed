@@ -35,7 +35,7 @@ const router = createBrowserRouter([
   {
     path: "/basics/postulates/incidence",
     element: <LinkingPostulates/>
-  }
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
