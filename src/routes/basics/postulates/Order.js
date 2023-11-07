@@ -5,7 +5,7 @@ import { documentTitle } from '../../../lib/utils';
 
 
 const currentSection = 'Postulates of Order'; // Replace with your current section
-const postulates = [1, 2, 3, 4, 5, 6, 7]; // Replace with your postulates
+const postulates = [1, 2, 3, 4, 5, 6,]; // Replace with your postulates
 
 const titles = {
     1: "Existence",

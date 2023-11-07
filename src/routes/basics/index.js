@@ -16,11 +16,11 @@ const Basics = () => {
     };
 
     const cardList = [
-        {
-            url: "/basics/definitions/",
-            name: "Definitions",
-            image: images.definitions
-        },
+        // {
+        //     url: "/basics/definitions/",
+        //     name: "Definitions",
+        //     image: images.definitions
+        // },
         {
             url: "/basics/postulates/",
             name: "Postulates",

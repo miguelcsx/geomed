@@ -26,6 +26,9 @@ export const postulates = {
     // Postualates of Incidence
     "postulate8": "\\text{For any two distinct points } A \\text{ and } B \\text{,} \\newline \\text{there exists a unique line } \\overline{\\rm{AB}} \\text{ that contains them.}",
     "postulate9": "\\text{A line contains at least two distinct points.}",
+    "postulate10": "\\text{Given a line, there is at least one point that does not belong to it.}",
+    "postulate11": "\\text{Given three non-collinear points, } \\newline \\text{there is a single plane that contains them.}",
+    "postulate17": "\\text{To all } \\overline{\\rm{AB}} \\text{, corresponds a real number greater than or equal to 0,} \\newline \\text{which we will call the measure of } \\overline{\\rm{AB}} \\text{, and which we will denote as } m(AB) \\text{or AB.}",
 };
 
 

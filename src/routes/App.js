@@ -20,16 +20,16 @@ const App = () => {
       name: "Basics",
       image: images.basics
     },
-    {
-      url: "/lines/",
-      name: "Lines",
-      image: images.lines
-    },
-    {
-      url: "/triangles",
-      name: "Triangles",
-      image: images.triangles
-    },
+    // {
+    //   url: "/lines/",
+    //   name: "Lines",
+    //   image: images.lines
+    // },
+    // {
+    //   url: "/triangles",
+    //   name: "Triangles",
+    //   image: images.triangles
+    // },
   ]
 
   return (
